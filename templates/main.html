@@ -14,9 +14,9 @@
         <div class="mx-auto" style="width: 100%; text-align: center;">
             <br><br>
             <b>
-                <h1 id="title-text">유다에 오신것을 환영합니다!</h1>
+                <h1 id="title-text">Welcome to Judas!</h1>
             </b><br>
-            <h5>추출을 원하는 동영상의 링크를 아래에 넣어주세요. <br> 비상업적 용도로만 이용하세요. 추출한 영상/음성을 사용하여 발생하는 문제는 '유다'의 책임이 없습니다.</h5><br>
+            <h5>Insert the video link below. <br> Use it for non-commercial use only. Judas is not responsible for any problems caused by using the extracted video/audio.</h5><br>
         </div>
 
 
@@ -31,8 +31,8 @@
                         aria-describedby="inputGroup-sizing-default" style="width:50%;" name="link">　
                     <label for="type"></label>
                     <select class="form-control" id="type" name="type">
-                        <option name="video">영상 (mp4)</option>
-                        <option name="audio">음성 (mp3)</option>
+                        <option name="video">Video (mp4)</option>
+                        <option name="audio">Audio (mp3)</option>
                     </select>
                     　<button id="this" type="submit" class="btn btn-dark"><i
                             class="fas fa-cloud-download-alt"></i></button>
@@ -46,9 +46,9 @@
         <br>
         <br>
         <br>
-        <span style="color:gray;">유다는 유튜브 다운로더의 줄임말입니다. </span><br>
-        <span style="color:gray;">Copyright 2019. khk4912 All rights reserved. </span><br>
-        <span style="color:gray;">khk49121@gmail.com, https://github.com/khk4912</span>
+        <span style="color:gray;">Judas - Youtube Downloader </span><br>
+        <span style="color:gray;">Copyright 2020. Tim23 All rights reserved. </span><br>
+        <span style="color:gray;">info@endbot.kro.kr, https://github.com/Tim232</span>
 
     </div>
 
@@ -62,10 +62,10 @@
             </div>
             <div class="col" style="text-align: center;">
                 <div class="spinner-border text-dark" role="status">
-                    <span class="sr-only">로딩 중...</span>
+                    <span class="sr-only">Loading...</span>
                 </div><br>
-                다운로드 하고 있어요... <br>
-                mp3 파일은 서버 성능으로 변환이 느릴 수 있어요...
+                Downloading... <br>
+                MP3 files may be slow to convert due to server performance.
             </div>
             <div class="col">
             </div>
@@ -75,7 +75,7 @@
     {% include 'js.html' %}
 </body>
 <script>
-    msg = ["유다에 오신것을 환영합니다!", "광고없는 다운로드", "빠른 mp4 다운로드", "한국어 지원"]
+    msg = ["Welcome to Judas!", "Download with NO ad", "Fast Video/Audio Download", "Made by Tim23"]
     i = 0
     function change_things() {
         $("#title-text").fadeOut(function () {

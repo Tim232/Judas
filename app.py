@@ -1,16 +1,16 @@
-from flask import *
+from flask import * # Flask, render_template, request, redirect url_for
 from flask_compress import Compress
-import os
-import youtube_dl
+from os import urandom
+from youtube_dl import YoutubeDL
 from multiprocessing.pool import ThreadPool
 
 compress = Compress()
 app = Flask(__name__)
-app.secret_key = os.urandom(12)
+app.secret_key = urandom(12)
 
 
 def downloading(form):
-    if form.get("type") == "영상 (mp4)":
+    if form.get("type") == "Video (mp4)":
         ty = "mp4"
         options = {
             "format": "bestvideo[ext=mp4]+bestaudio[ext=m4a]",
@@ -33,7 +33,7 @@ def downloading(form):
             "outtmpl": "static/downloads/%(title)s.%(ext)s",
             "continuedl": True,
         }
-    with youtube_dl.YoutubeDL(options) as ydl:
+    with YoutubeDL(options) as ydl:
         info = ydl.extract_info(form.get("link"), download=True)
     return info, ty
 
