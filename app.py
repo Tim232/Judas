@@ -1,4 +1,4 @@
-from flask import * # Flask, render_template, request, redirect url_for
+from flask import Flask, render_template, request, redirect, url_for
 from flask_compress import Compress
 from os import urandom
 from youtube_dl import YoutubeDL
